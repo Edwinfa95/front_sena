@@ -1,0 +1,74 @@
+@import '../../assets/variables.scss'; // Importa las variables SCSS
+
+// Centra el contenedor del formulario en la página
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Altura completa de la ventana
+  background-color: $color-grey; // Color de fondo gris claro
+}
+
+// Estilos para el formulario
+.login-form {
+  background-color: $color-white; // Fondo blanco para el formulario
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra sutil
+  max-width: 400px; // Ancho máximo del formulario
+  width: 100%;
+  
+  // Estilo del título dentro del formulario
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: $color-primary; // Color del texto en azul institucional
+    font-family: Arial, sans-serif; // Fuente limpia y profesional
+  }
+  
+  // Agrupación de los elementos del formulario
+  .form-group {
+    margin-bottom: 15px;
+    
+    // Estilo para las etiquetas
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: $color-primary; // Color del texto de las etiquetas en azul institucional
+      font-family: Arial, sans-serif; // Fuente limpia y profesional
+    }
+    
+    // Estilo para los campos de entrada
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $color-primary; // Borde azul institucional
+      border-radius: 4px;
+      box-sizing: border-box; // Incluye padding y border en el ancho total
+      
+      // Estilo cuando el campo está en foco
+      &:focus {
+        border-color: $color-secondary; // Color de borde al enfocar, un tono más oscuro de azul
+        outline: none; // Elimina el contorno por defecto
+      }
+    }
+  }
+  
+  // Estilo para el botón de login
+  .login-button {
+    background-color: $color-primary; // Color de fondo azul institucional
+    color: $color-white; // Color del texto blanco
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; // Ocupa todo el ancho disponible
+    transition: background-color 0.3s ease;
+    
+    // Estilo cuando se pasa el ratón por encima del botón
+    &:hover {
+      background-color: darken($color-primary, 10%); // Color de fondo más oscuro al pasar el ratón
+    }
+  }
+}
